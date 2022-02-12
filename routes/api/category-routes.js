@@ -83,12 +83,12 @@ router.delete('/:id', (req, res) => {
         res.status(404).json({ message: 'No Category found with this id' });
         return;
     }
-    res.json(dbUserData);
-})
-.catch(err => {
+    res.json(dbUserData); 
+  })
+  .catch(err => {
     console.log(err);
     res.status(500).json(err);
-});
+  });
 });
 
 module.exports = router;
